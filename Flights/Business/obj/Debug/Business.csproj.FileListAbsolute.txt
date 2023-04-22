@@ -15,16 +15,3 @@ D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\EntityFramework.SqlServer.xm
 D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.dll
 D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.pdb
 D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.dll.config
-D:\ProyectFligth\Flights\Business\bin\Debug\Business.dll.config
-D:\ProyectFligth\Flights\Business\bin\Debug\Business.dll
-D:\ProyectFligth\Flights\Business\bin\Debug\Business.pdb
-D:\ProyectFligth\Flights\Business\bin\Debug\DataAccess.dll
-D:\ProyectFligth\Flights\Business\bin\Debug\DataAccess.pdb
-D:\ProyectFligth\Flights\Business\bin\Debug\DataAccess.dll.config
-D:\ProyectFligth\Flights\Business\obj\Debug\Business.csproj.AssemblyReference.cache
-D:\ProyectFligth\Flights\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
-D:\ProyectFligth\Flights\Business\obj\Debug\Business.csproj.CopyComplete
-D:\ProyectFligth\Flights\Business\obj\Debug\Business.dll
-D:\ProyectFligth\Flights\Business\obj\Debug\Business.pdb
-D:\ProyectFligth\Flights\Business\bin\Debug\Newtonsoft.Json.dll
-D:\ProyectFligth\Flights\Business\bin\Debug\Newtonsoft.Json.xml
