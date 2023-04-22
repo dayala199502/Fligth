@@ -103,3 +103,32 @@ D:\Pruebas\Nueva carpeta\Flights\ApiFlights\bin\DataAccess.dll.config
 D:\Pruebas\Nueva carpeta\Flights\ApiFlights\bin\EntityFramework.xml
 D:\Pruebas\Nueva carpeta\Flights\ApiFlights\bin\EntityFramework.SqlServer.dll
 D:\Pruebas\Nueva carpeta\Flights\ApiFlights\bin\EntityFramework.SqlServer.xml
+D:\ProyectFligth\Flights\ApiFlights\bin\ApiFlights.dll.config
+D:\ProyectFligth\Flights\ApiFlights\bin\ApiFlights.dll
+D:\ProyectFligth\Flights\ApiFlights\bin\ApiFlights.pdb
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csc.exe
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csc.exe.config
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csc.rsp
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csi.exe
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csi.exe.config
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\csi.rsp
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\vbc.exe
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\vbc.exe.config
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\vbc.rsp
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\VBCSCompiler.exe
+D:\ProyectFligth\Flights\ApiFlights\bin\roslyn\VBCSCompiler.exe.config
+D:\ProyectFligth\Flights\ApiFlights\bin\Business.dll
+D:\ProyectFligth\Flights\ApiFlights\bin\Newtonsoft.Json.dll
+D:\ProyectFligth\Flights\ApiFlights\bin\DataAccess.dll
+D:\ProyectFligth\Flights\ApiFlights\bin\Business.pdb
+D:\ProyectFligth\Flights\ApiFlights\bin\Business.dll.config
+D:\ProyectFligth\Flights\ApiFlights\bin\DataAccess.pdb
+D:\ProyectFligth\Flights\ApiFlights\bin\DataAccess.dll.config
+D:\ProyectFligth\Flights\ApiFlights\obj\Debug\ApiFlights.csproj.AssemblyReference.cache
+D:\ProyectFligth\Flights\ApiFlights\obj\Debug\ApiFlights.csproj.CoreCompileInputs.cache
+D:\ProyectFligth\Flights\ApiFlights\obj\Debug\ApiFlights.csproj.CopyComplete
+D:\ProyectFligth\Flights\ApiFlights\obj\Debug\ApiFlights.dll
+D:\ProyectFligth\Flights\ApiFlights\obj\Debug\ApiFlights.pdb

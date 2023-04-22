@@ -38,3 +38,21 @@ D:\Pruebas\Nueva carpeta\Flights\DataAccess\bin\Debug\Microsoft.Extensions.Primi
 D:\Pruebas\Nueva carpeta\Flights\DataAccess\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 D:\Pruebas\Nueva carpeta\Flights\DataAccess\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Pruebas\Nueva carpeta\Flights\DataAccess\bin\Debug\System.ValueTuple.xml
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\DataAccess.dll.config
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\DataAccess.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\DataAccess.pdb
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\EntityFramework.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.Buffers.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.Memory.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.Numerics.Vectors.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\System.ValueTuple.dll
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\EntityFramework.xml
+D:\ProyectFligth\Flights\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProyectFligth\Flights\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\ProyectFligth\Flights\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\ProyectFligth\Flights\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\ProyectFligth\Flights\DataAccess\obj\Debug\DataAccess.dll
+D:\ProyectFligth\Flights\DataAccess\obj\Debug\DataAccess.pdb
