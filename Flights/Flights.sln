@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3EA0B628-81B1-4191-99A3-BA4ACFC0CCEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{75E4CD2B-7D06-45E6-BE3A-6715E21DF4C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiFlights", "ApiFlights\ApiFlights.csproj", "{0E1214B4-4D18-4CA1-B714-77BA57752F35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EA0B628-81B1-4191-99A3-BA4ACFC0CCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA0B628-81B1-4191-99A3-BA4ACFC0CCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA0B628-81B1-4191-99A3-BA4ACFC0CCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA0B628-81B1-4191-99A3-BA4ACFC0CCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E4CD2B-7D06-45E6-BE3A-6715E21DF4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E4CD2B-7D06-45E6-BE3A-6715E21DF4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E4CD2B-7D06-45E6-BE3A-6715E21DF4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E4CD2B-7D06-45E6-BE3A-6715E21DF4C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1214B4-4D18-4CA1-B714-77BA57752F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1214B4-4D18-4CA1-B714-77BA57752F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1214B4-4D18-4CA1-B714-77BA57752F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1214B4-4D18-4CA1-B714-77BA57752F35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0F153D6-92F4-47AD-B033-430C05982F06}
+	EndGlobalSection
+EndGlobal

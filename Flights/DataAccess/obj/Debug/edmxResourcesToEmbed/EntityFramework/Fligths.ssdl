@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FligthsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FligthsModelStoreContainer">
+    <EntitySet Name="FLIGHT" EntityType="FligthsModel.Store.FLIGHT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JOURNEY" EntityType="FligthsModel.Store.JOURNEY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANSPORT" EntityType="FligthsModel.Store.TRANSPORT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JOURNEYFLIGHTSet" EntityType="FligthsModel.Store.JOURNEYFLIGHTSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TRANSPORT_ID" Association="FligthsModel.Store.FK_TRANSPORT_ID">
+      <End Role="TRANSPORT" EntitySet="TRANSPORT" />
+      <End Role="FLIGHT" EntitySet="FLIGHT" />
+    </AssociationSet>
+    <AssociationSet Name="FLIGHTJOURNEYFLIGHT" Association="FligthsModel.Store.FLIGHTJOURNEYFLIGHT">
+      <End Role="FLIGHT" EntitySet="FLIGHT" />
+      <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+    </AssociationSet>
+    <AssociationSet Name="JOURNEYJOURNEYFLIGHT" Association="FligthsModel.Store.JOURNEYJOURNEYFLIGHT">
+      <End Role="JOURNEY" EntitySet="JOURNEY" />
+      <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FLIGHT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TRANSPORT_ID" Type="int" Nullable="false" />
+    <Property Name="ORIGIN" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="DESTINATION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRICE" Type="decimal" Nullable="false" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="JOURNEY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORIGIN" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="DESTINATION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRICE" Type="decimal" Nullable="true" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="TRANSPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLIGHTCARNER" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLIGHTNUMBER" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="JOURNEYFLIGHTSet">
+    <Key>
+      <PropertyRef Name="FLIGHTID" />
+      <PropertyRef Name="JOURNEYID" />
+    </Key>
+    <Property Name="FLIGHTID" Type="int" Nullable="false" />
+    <Property Name="JOURNEYID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TRANSPORT_ID">
+    <End Role="TRANSPORT" Type="FligthsModel.Store.TRANSPORT" Multiplicity="1" />
+    <End Role="FLIGHT" Type="FligthsModel.Store.FLIGHT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FLIGHT">
+        <PropertyRef Name="TRANSPORT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FLIGHTJOURNEYFLIGHT">
+    <End Role="FLIGHT" Type="FligthsModel.Store.FLIGHT" Multiplicity="1" />
+    <End Role="JOURNEYFLIGHT" Type="FligthsModel.Store.JOURNEYFLIGHTSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FLIGHT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JOURNEYFLIGHT">
+        <PropertyRef Name="FLIGHTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JOURNEYJOURNEYFLIGHT">
+    <End Role="JOURNEY" Type="FligthsModel.Store.JOURNEY" Multiplicity="1" />
+    <End Role="JOURNEYFLIGHT" Type="FligthsModel.Store.JOURNEYFLIGHTSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JOURNEY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JOURNEYFLIGHT">
+        <PropertyRef Name="JOURNEYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

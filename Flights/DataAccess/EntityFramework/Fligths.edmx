@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FligthsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FligthsModelStoreContainer">
+    <EntitySet Name="FLIGHT" EntityType="FligthsModel.Store.FLIGHT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JOURNEY" EntityType="FligthsModel.Store.JOURNEY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANSPORT" EntityType="FligthsModel.Store.TRANSPORT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JOURNEYFLIGHTSet" EntityType="FligthsModel.Store.JOURNEYFLIGHTSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TRANSPORT_ID" Association="FligthsModel.Store.FK_TRANSPORT_ID">
+      <End Role="TRANSPORT" EntitySet="TRANSPORT" />
+      <End Role="FLIGHT" EntitySet="FLIGHT" />
+    </AssociationSet>
+    <AssociationSet Name="FLIGHTJOURNEYFLIGHT" Association="FligthsModel.Store.FLIGHTJOURNEYFLIGHT">
+      <End Role="FLIGHT" EntitySet="FLIGHT" />
+      <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+    </AssociationSet>
+    <AssociationSet Name="JOURNEYJOURNEYFLIGHT" Association="FligthsModel.Store.JOURNEYJOURNEYFLIGHT">
+      <End Role="JOURNEY" EntitySet="JOURNEY" />
+      <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FLIGHT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TRANSPORT_ID" Type="int" Nullable="false" />
+    <Property Name="ORIGIN" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="DESTINATION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRICE" Type="decimal" Nullable="false" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="JOURNEY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORIGIN" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="DESTINATION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRICE" Type="decimal" Nullable="true" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="TRANSPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLIGHTCARNER" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FLIGHTNUMBER" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="JOURNEYFLIGHTSet">
+    <Key>
+      <PropertyRef Name="FLIGHTID" />
+      <PropertyRef Name="JOURNEYID" />
+    </Key>
+    <Property Name="FLIGHTID" Type="int" Nullable="false" />
+    <Property Name="JOURNEYID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TRANSPORT_ID">
+    <End Role="TRANSPORT" Type="FligthsModel.Store.TRANSPORT" Multiplicity="1" />
+    <End Role="FLIGHT" Type="FligthsModel.Store.FLIGHT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FLIGHT">
+        <PropertyRef Name="TRANSPORT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FLIGHTJOURNEYFLIGHT">
+    <End Role="FLIGHT" Type="FligthsModel.Store.FLIGHT" Multiplicity="1" />
+    <End Role="JOURNEYFLIGHT" Type="FligthsModel.Store.JOURNEYFLIGHTSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FLIGHT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JOURNEYFLIGHT">
+        <PropertyRef Name="FLIGHTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JOURNEYJOURNEYFLIGHT">
+    <End Role="JOURNEY" Type="FligthsModel.Store.JOURNEY" Multiplicity="1" />
+    <End Role="JOURNEYFLIGHT" Type="FligthsModel.Store.JOURNEYFLIGHTSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JOURNEY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="JOURNEYFLIGHT">
+        <PropertyRef Name="JOURNEYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FligthsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FLIGHT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRANSPORT_ID" Type="Int32" Nullable="false" />
+          <Property Name="ORIGIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRICE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <NavigationProperty Name="TRANSPORT" Relationship="Self.FK_TRANSPORT_ID" FromRole="FLIGHT" ToRole="TRANSPORT" />
+          <NavigationProperty Name="JOURNEYFLIGHT" Relationship="FligthsModel.FLIGHTJOURNEYFLIGHT" FromRole="FLIGHT" ToRole="JOURNEYFLIGHT" />
+        </EntityType>
+        <EntityType Name="JOURNEY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ORIGIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESTINATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRICE" Type="Decimal" Precision="10" Scale="0" />
+          <NavigationProperty Name="JOURNEYFLIGHT" Relationship="FligthsModel.JOURNEYJOURNEYFLIGHT" FromRole="JOURNEY" ToRole="JOURNEYFLIGHT" />
+        </EntityType>
+        <EntityType Name="TRANSPORT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLIGHTCARNER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FLIGHTNUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="FLIGHT" Relationship="Self.FK_TRANSPORT_ID" FromRole="TRANSPORT" ToRole="FLIGHT" />
+        </EntityType>
+        <Association Name="FK_TRANSPORT_ID">
+          <End Role="TRANSPORT" Type="Self.TRANSPORT" Multiplicity="1" />
+          <End Role="FLIGHT" Type="Self.FLIGHT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSPORT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FLIGHT">
+              <PropertyRef Name="TRANSPORT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FligthsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FLIGHT" EntityType="Self.FLIGHT" />
+          <EntitySet Name="JOURNEY" EntityType="Self.JOURNEY" />
+          <EntitySet Name="TRANSPORT" EntityType="Self.TRANSPORT" />
+          <AssociationSet Name="FK_TRANSPORT_ID" Association="Self.FK_TRANSPORT_ID">
+            <End Role="TRANSPORT" EntitySet="TRANSPORT" />
+            <End Role="FLIGHT" EntitySet="FLIGHT" />
+          </AssociationSet>
+          <EntitySet Name="JOURNEYFLIGHTSet" EntityType="FligthsModel.JOURNEYFLIGHT" />
+          <AssociationSet Name="FLIGHTJOURNEYFLIGHT" Association="FligthsModel.FLIGHTJOURNEYFLIGHT">
+            <End Role="FLIGHT" EntitySet="FLIGHT" />
+            <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+          </AssociationSet>
+          <AssociationSet Name="JOURNEYJOURNEYFLIGHT" Association="FligthsModel.JOURNEYJOURNEYFLIGHT">
+            <End Role="JOURNEY" EntitySet="JOURNEY" />
+            <End Role="JOURNEYFLIGHT" EntitySet="JOURNEYFLIGHTSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="JOURNEYFLIGHT">
+          <Key>
+            <PropertyRef Name="FLIGHTID" />
+            <PropertyRef Name="JOURNEYID" />
+          </Key>
+          <NavigationProperty Name="FLIGHT" Relationship="FligthsModel.FLIGHTJOURNEYFLIGHT" FromRole="JOURNEYFLIGHT" ToRole="FLIGHT" />
+          <Property Name="FLIGHTID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="JOURNEY" Relationship="FligthsModel.JOURNEYJOURNEYFLIGHT" FromRole="JOURNEYFLIGHT" ToRole="JOURNEY" />
+          <Property Name="JOURNEYID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FLIGHTJOURNEYFLIGHT">
+          <End Type="FligthsModel.FLIGHT" Role="FLIGHT" Multiplicity="1" />
+          <End Type="FligthsModel.JOURNEYFLIGHT" Role="JOURNEYFLIGHT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FLIGHT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="JOURNEYFLIGHT">
+              <PropertyRef Name="FLIGHTID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JOURNEYJOURNEYFLIGHT">
+          <End Type="FligthsModel.JOURNEY" Role="JOURNEY" Multiplicity="1" />
+          <End Type="FligthsModel.JOURNEYFLIGHT" Role="JOURNEYFLIGHT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JOURNEY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="JOURNEYFLIGHT">
+              <PropertyRef Name="JOURNEYID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FligthsModelStoreContainer" CdmEntityContainer="FligthsEntities">
+    <EntitySetMapping Name="FLIGHT">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.FLIGHT)">
+        <MappingFragment StoreEntitySet="FLIGHT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TRANSPORT_ID" ColumnName="TRANSPORT_ID" />
+          <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+          <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNEY">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.JOURNEY)">
+        <MappingFragment StoreEntitySet="JOURNEY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+          <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORT">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.TRANSPORT)">
+        <MappingFragment StoreEntitySet="TRANSPORT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FLIGHTCARNER" ColumnName="FLIGHTCARNER" />
+          <ScalarProperty Name="FLIGHTNUMBER" ColumnName="FLIGHTNUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNEYFLIGHTSet">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.JOURNEYFLIGHT)">
+        <MappingFragment StoreEntitySet="JOURNEYFLIGHTSet">
+          <ScalarProperty Name="FLIGHTID" ColumnName="FLIGHTID" />
+          <ScalarProperty Name="JOURNEYID" ColumnName="JOURNEYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

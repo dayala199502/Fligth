@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FligthsModelStoreContainer" CdmEntityContainer="FligthsEntities">
+    <EntitySetMapping Name="FLIGHT">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.FLIGHT)">
+        <MappingFragment StoreEntitySet="FLIGHT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TRANSPORT_ID" ColumnName="TRANSPORT_ID" />
+          <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+          <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNEY">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.JOURNEY)">
+        <MappingFragment StoreEntitySet="JOURNEY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+          <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORT">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.TRANSPORT)">
+        <MappingFragment StoreEntitySet="TRANSPORT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FLIGHTCARNER" ColumnName="FLIGHTCARNER" />
+          <ScalarProperty Name="FLIGHTNUMBER" ColumnName="FLIGHTNUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JOURNEYFLIGHTSet">
+      <EntityTypeMapping TypeName="IsTypeOf(FligthsModel.JOURNEYFLIGHT)">
+        <MappingFragment StoreEntitySet="JOURNEYFLIGHTSet">
+          <ScalarProperty Name="FLIGHTID" ColumnName="FLIGHTID" />
+          <ScalarProperty Name="JOURNEYID" ColumnName="JOURNEYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

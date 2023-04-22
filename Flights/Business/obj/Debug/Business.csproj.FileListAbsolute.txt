@@ -1,0 +1,17 @@
+D:\Pruebas\Nueva carpeta\Flights\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+D:\Pruebas\Nueva carpeta\Flights\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\Business.dll.config
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\Business.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\Business.pdb
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\Newtonsoft.Json.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\Newtonsoft.Json.xml
+D:\Pruebas\Nueva carpeta\Flights\Business\obj\Debug\Business.csproj.CopyComplete
+D:\Pruebas\Nueva carpeta\Flights\Business\obj\Debug\Business.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\obj\Debug\Business.pdb
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\EntityFramework.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\EntityFramework.xml
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.dll
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.pdb
+D:\Pruebas\Nueva carpeta\Flights\Business\bin\Debug\DataAccess.dll.config
